@@ -4,6 +4,7 @@ express = require 'express'
   , routes = require './routes'
   , http = require 'http'
   , path = require 'path'
+  , assets = require 'connect-assets'
 
 app = express()
 
@@ -16,7 +17,9 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
-  app.use express.static(path.join(__dirname, 'public'))
+  app.use assets
+    build: true
+    compress: true
 
 app.configure 'development', ->
   app.use express.errorHandler()
