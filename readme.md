@@ -5,6 +5,11 @@ This is a port of the default express project template, with all javascript
 files converted to coffeescript, for those who prefer to use coffeescript as 
 their primary language.
 
+This express 'starter kit' also provides asset management via 
+[connect-assets](https://github.com/TrevorBurnham/connect-assets), which 
+allows coffeescript-to-js conversion of client-side code, as well as support 
+for less/stylus stylesheet generation.
+
 Requirements
 ------------
 
