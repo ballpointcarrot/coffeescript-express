@@ -17,12 +17,18 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
-  app.use assets
-    build: true
-    compress: true
 
 app.configure 'development', ->
   app.use express.errorHandler()
+  app.use assets
+    build: true
+    compress: true
+    buildDir: false
+
+app.configure 'production', ->
+  app.use assets
+    build: true
+    compress: true
 
 app.get '/', routes.index
 
