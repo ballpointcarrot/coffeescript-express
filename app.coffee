@@ -1,12 +1,14 @@
 
 # Module dependencies
 express = require 'express'
-  , routes = require './routes'
-  , http = require 'http'
-  , path = require 'path'
-  , assets = require 'connect-assets'
+routes = require './routes'
+http = require 'http'
+path = require 'path'
+assets = require 'connect-assets'
 
 app = express()
+#Create an instance of the object to be reused, for example: io = socket.listen(server)
+server = http.createServer(app)
 
 app.configure ->
   app.set 'port', process.env.PORT || 3000
@@ -17,6 +19,9 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
+
+  #uncomment to enable the static files server
+  #app.use express.static( path.join( __dirname, 'public' ) )
 
 app.configure 'development', ->
   app.use express.errorHandler()
@@ -32,5 +37,5 @@ app.configure 'production', ->
 
 app.get '/', routes.index
 
-http.createServer(app).listen app.get('port'), ->
+server.listen app.get('port'), ->
   console.log "Express server listening on port #{app.get 'port'}"
