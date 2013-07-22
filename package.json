@@ -9,7 +9,6 @@
     "coffee-script": "*",
     "express": "*",
     "jade": "*",
-    "stylus": "*",
     "connect-assets": "*"
   }
 }
