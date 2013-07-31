@@ -14,16 +14,26 @@ Requirements
 ------------
 
 You need to have the following in order to run this setup:
- * Node.js (0.8.4)
- * Express (3.0rc1)
- * Coffeescript (1.3.1)
+ * Node.js (test 0.10.13)
+ * Express (Global install) (test 3.3.4)
+ * Coffeescript (Global install) (test 1.6.3)
+ * onnect-assets (test ~2.5.0)
 
 Usage
 -----
 
-after cloning the repository, run the following:
+cloning the repository, run the following:
 
-    npm install
-    coffee app.coffee
+	git clone https://github.com/iddar/coffeescript-express.git
+	
+	npm install -g coffee-script express
+	npm install
+
+	coffee app.coffee
+	or
+	npm start
+	or
+	nodemon app.coffee (recommend for develop time. require `npm install -g nodemon` )
 
 this will start up your express coffeescript app, and you're ready to go.
+
