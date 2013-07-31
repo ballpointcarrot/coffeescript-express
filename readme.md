@@ -27,7 +27,7 @@ cloning the repository, run the following:
 	git clone https://github.com/iddar/coffeescript-express.git
 	
 	npm install -g coffee-script express
-	npm intall
+	npm install
 
 	coffee app.coffee
 	or
