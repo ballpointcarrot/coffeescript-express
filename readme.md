@@ -13,11 +13,12 @@ for less/stylus stylesheet generation.
 Requirements
 ------------
 
-You need to have the following in order to run this setup:
- * Node.js (test 0.10.13)
- * Express (Global install) (test 3.3.4)
- * Coffeescript (Global install) (test 1.6.3)
- * connect-assets (test ~2.5.0)
+You need to have the following in order to run this setup (the last tested versions
+are marked in parentheses):
+ * Node.js (0.10.17)
+ * Express (Global install) (3.3.5)
+ * Coffeescript (Global install) (1.6.3)
+ * connect-assets (2.5.2)
 
 Usage
 -----
