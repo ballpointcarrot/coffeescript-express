@@ -17,7 +17,7 @@ You need to have the following in order to run this setup:
  * Node.js (test 0.10.13)
  * Express (Global install) (test 3.3.4)
  * Coffeescript (Global install) (test 1.6.3)
- * onnect-assets (test ~2.5.0)
+ * connect-assets (test ~2.5.0)
 
 Usage
 -----
